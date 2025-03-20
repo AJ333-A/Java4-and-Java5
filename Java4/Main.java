@@ -1,3 +1,6 @@
+//bank account management system
+//this program defines an abstract bankaccount class that represents a bank account with a baalance
+//it includes deposits, retrieving balance, and withdrawal.
 import java.util.Scanner;
 
 abstract class BankAccount { 
