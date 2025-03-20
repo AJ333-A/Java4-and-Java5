@@ -1,4 +1,5 @@
-
+//code to define a vehicle class with attributes
+//Done by Joy Ashley
     
 class Vehicle {
     protected String brand;
@@ -36,12 +37,12 @@ class Car extends Vehicle {
         this.fuelLevel = fuelLevel;
     }
 
-    // Method to refuel the car, ensuring the fuel level doesn't exceed 100
+    // Method to refuel the car
     public void refuel(int amount) {
-        fuelLevel = Math.min(100, fuelLevel + amount); // Fuel level cannot exceed 100
+        fuelLevel = Math.min(100, fuelLevel + amount); 
     }
 
-    // Overriding showDetails to display car-specific details (including fuel level)
+    // Overriding showDetails to display car-specific details 
     @Override
     public void showDetails() {
         super.showDetails();  // Call the parent class method
@@ -63,7 +64,7 @@ class Bike extends Vehicle {
         helmetOn = true;
     }
 
-    // Overriding showDetails to display bike-specific details (including helmet status)
+    // Overriding showDetails to display bike-specific details 
     @Override
     public void showDetails() {
         super.showDetails();  // Call the parent class method
@@ -71,28 +72,28 @@ class Bike extends Vehicle {
     }
 }public class VehicleSystem {
     public static void main(String[] args) {
-        // Create a Car object with initial values
+        //Car object with initial values
         Car car = new Car("Toyota", 60, 50);
 
         // Perform operations on the car
-        car.accelerate(20);  // Accelerate by 20
-        car.brake(30);       // Brake by 30
-        car.refuel(30);      // Refuel by 30
+        car.accelerate(20);  
+        car.brake(30);       
+        car.refuel(30);     
 
-        // Display the car details after operations
+        // Display the car details 
         car.showDetails();
 
-        System.out.println();  // Empty line for separation
+        System.out.println();  
 
-        // Create a Bike object with initial values
+        // Bike object with initial values
         Bike bike = new Bike("Yamaha", 40, false);
 
-        // Perform operations on the bike
-        bike.accelerate(15);  // Accelerate by 15
-        bike.brake(10);       // Brake by 10
-        bike.wearHelmet();    // Wear helmet
+    
+        bike.accelerate(15);  
+        bike.brake(10);      
+        bike.wearHelmet();    
 
-        // Display the bike details after operations
+      
         bike.showDetails();
     }
 }
